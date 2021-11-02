@@ -1,0 +1,48 @@
+.header {
+    padding: 24px 0;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+
+        @include a (mobile) {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__item {
+        &-link {
+            font-size: toRem(16);
+            white-space: nowrap;
+            color: rgba(18, 16, 12, 0.7);
+
+            &:hover {
+                color: #FFAE33;
+            }
+        }
+    }
+
+    &__btn {
+        font-size: toRem(14);
+        width: 80px;
+        line-height: 32px;
+        background-color: $dark-color;
+        color: #F9F9F9;
+        border-radius: 12px;
+    }
+
+
+}

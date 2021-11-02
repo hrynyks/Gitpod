@@ -1,0 +1,82 @@
+.remote {
+    padding-bottom: 176px;
+
+    @include a (laptop) {
+        padding-bottom: 150px;
+    }
+
+    @include a (tablet-xl) {
+        padding-bottom: 125px;
+    }
+
+    @include a (tablet) {
+        padding-bottom: 100px;
+    }
+
+    @include a (mobile) {
+        padding-bottom: 75px;
+    }
+
+    &__title {
+        font-size: toRem(54);
+        font-weight: 700;
+        color: $dark-color;
+        text-align: center;
+        margin-bottom: 47px;
+    }
+
+    &__image {
+        margin-bottom: 49px;
+    }
+
+    &__descr {
+        line-height: 32px;
+        color: rgba(18, 16, 12, 0.7);
+        text-align: center;
+        max-width: 877px;
+        width: 100%;
+        margin: 0 auto 45px;
+    }
+
+    &__links {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    &__link {
+        font-size: toRem(18);
+        font-weight: 700;
+        color: $dark-color;
+        width: 207px;
+        line-height: 47px;
+        background-color: #fff;
+        box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 9px;
+        text-align: center;
+        position: relative;
+        padding-left: 32px;
+
+        &-left::before {
+            content: "";
+            position: absolute;
+            background: url(/src/assets/images/remote-chrom.png);
+            width: 22px;
+            height: 22px;
+            left: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-right::before {
+            content: "";
+            position: absolute;
+            background: url(/src/assets/images/remote-firefox.png);
+            width: 22px;
+            height: 22px;
+            left: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
